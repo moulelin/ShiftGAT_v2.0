@@ -1,4 +1,5 @@
 # It base Shift-GCN that adds GAT module
+## The version is v2.1            -- Moule Lin
 It exceeds state-of-the-art methods with 10x less FLOPs.
 
 
