@@ -1,11 +1,7 @@
-# Shift-GCN
-The implementation for "[Skeleton-Based Action Recognition with Shift Graph Convolutional Network](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cheng_Skeleton-Based_Action_Recognition_With_Shift_Graph_Convolutional_Network_CVPR_2020_paper.pdf)" (CVPR2020 oral). Shift-GCN is a lightweight skeleton-based action recognition model, which exceeds state-of-the-art methods with 10x less FLOPs.
+# It base Shift-GCN that adds GAT module
+It exceeds state-of-the-art methods with 10x less FLOPs.
 
-## Prerequisite
 
- - PyTorch 0.4.1
- - Cuda 9.0
- - g++ 5.4.0
 
 ## Compile cuda extensions
 
@@ -48,28 +44,3 @@ The implementation for "[Skeleton-Based Action Recognition with Shift Graph Conv
 
   - For NTU120, change the dataset path in config files, and change `num_class` in config files from 60 to 120.
   
-## Multi-stream ensemble
-
-To ensemble the results of 4 streams. Change models name in `ensemble.py` depending on your experiment setting. Then run `python ensemble.py`.
-
-## Trained models
-
-We release several trained models:
-
-Model|Dataset|Setting|Top1(%)
--|-|-|-
-./save_models/ntu_ShiftGCN_joint_xview.pt|NTU-RGBD|X-view|95.1
-./save_models/ntu_ShiftGCN_joint_xsub.pt|NTU-RGBD|X-sub|87.8
-./save_models/ntu120_ShiftGCN_joint_xsetup.pt|NTU-RGBD120|X-setup|83.2
-./save_models/ntu120_ShiftGCN_joint_xsub.pt|NTU-RGBD120|X-sub|80.9
-
-     
-## Citation
-If you find this model useful for your research, please use the following BibTeX entry.
-
-    @inproceedings{cheng2020shiftgcn,  
-      title     = {Skeleton-Based Action Recognition with Shift Graph Convolutional Network},  
-      author    = {Ke Cheng and Yifan Zhang and Xiangyu He and Weihan Chen and Jian Cheng and Hanqing Lu},  
-      booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},  
-      year      = {2020},  
-    }
